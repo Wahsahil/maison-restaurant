@@ -191,7 +191,7 @@ The publishable key is intended for browser applications; database access must s
 5. Configure the deployed `/exec` URL in `script.js`.
 
 ```javascript
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+const GOOGLE_SCRIPT_URL = ''https://script.google.com/macros/s/AKfycbyo_H1CIyy-k0HGQmxq_36-sh7MDQo_DwtFws_nvj3tXVXtnEm42WOLH9eM7P8A4RU3ag/exec'';
 ```
 
 Use appropriate validation and access controls before handling real customer information.
