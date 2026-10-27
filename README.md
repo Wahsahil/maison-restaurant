@@ -36,15 +36,17 @@ The project is built using HTML, CSS, and vanilla JavaScript, keeping the applic
 
 ## Preview
 
-> Add screenshots of your actual application to the `screenshots/` folder in this repository.
+Maison features a premium restaurant experience with an elegant landing page, curated menu, and interactive table reservation form.
 
-| Homepage | Menu |
-|:---:|:---:|
-| ![Maison homepage](screenshots/homepage.png) | ![Maison menu](screenshots/menu.png) |
+| Homepage & Menu | Table Reservations |
+|---|---|
+| Explore the restaurant and featured dishes. | Submit a reservation with your contact details, date, time, and guest count. |
 
-| Reservation Form | Booking Records |
-|:---:|:---:|
-| ![Maison reservation form](screenshots/reservation.png) | ![Booking records](screenshots/bookings.png) |
+**Core functionality**
+- Email authentication with Supabase.
+- PostgreSQL reservation storage.
+- Google Sheets booking integration.
+- Responsive restaurant interface.
 
 *Replace these image paths with your screenshots. Until the files are uploaded, GitHub will display broken image links.*
 
