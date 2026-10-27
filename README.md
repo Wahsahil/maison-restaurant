@@ -1,3 +1,4 @@
+
 # MAISON. — Restaurant Reservations
 
 <p align="center">
@@ -5,7 +6,7 @@
 </p>
 
 <p align="center">
-  A premium restaurant website designed to make table reservations simple, elegant, and convenient.
+  A premium restaurant reservation website built with HTML, CSS, JavaScript, Supabase, and Google Sheets.
 </p>
 
 <p align="center">
@@ -14,87 +15,119 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
   <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Google Sheets">
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Project Status">
 </p>
 
 <p align="center">
-  <a href="YOUR_VERCEL_DEPLOYMENT_URL">Live Demo</a> ·
-  <a href="#features">Features</a> ·
-  <a href="#getting-started">Getting Started</a> ·
-  <a href="#architecture">Architecture</a>
+  <a href="#-application-preview">Preview</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-technology-stack">Tech Stack</a> •
+  <a href="#-architecture">Architecture</a> •
+  <a href="#-getting-started">Getting Started</a>
 </p>
 
 ---
 
-## Overview
+## 📖 Overview
 
-**Maison** is a modern restaurant reservation web application that combines a premium dining-inspired interface with a functional booking system.
+**Maison** is a restaurant reservation web application designed to provide an elegant dining experience from the moment a customer visits the website to the moment they request a table.
 
-Customers can explore the restaurant, browse featured dishes, create an account, sign in, and request a table reservation. Booking records are stored in Supabase and synchronized with Google Sheets for convenient reservation management.
+The application combines a premium restaurant-inspired interface with user authentication, reservation management, and database integration.
 
-The project is built using HTML, CSS, and vanilla JavaScript, keeping the application lightweight and straightforward to deploy.
+Customers can explore the restaurant, browse featured dishes, create an account, sign in, and submit table reservation requests. Reservation records are stored in Supabase and can also be synchronized with Google Sheets through Google Apps Script.
 
-## Preview
+The project is built with vanilla HTML, CSS, and JavaScript, making it lightweight, easy to understand, and straightforward to deploy.
 
-Maison features a premium restaurant experience with an elegant landing page, curated menu, and interactive table reservation form.
+## 📸 Application Preview
 
-| Homepage & Menu | Table Reservations |
-|---|---|
-| Explore the restaurant and featured dishes. | Submit a reservation with your contact details, date, time, and guest count. |
+### 🏠 Homepage
 
-**Core functionality**
-- Email authentication with Supabase.
-- PostgreSQL reservation storage.
-- Google Sheets booking integration.
-- Responsive restaurant interface.
+The landing page introduces the Maison brand through elegant typography, a restaurant hero image, and a clear reservation call to action.
 
-*Replace these image paths with your screenshots. Until the files are uploaded, GitHub will display broken image links.*
+<p align="center">
+  <img src="homepage.png" alt="Maison Restaurant Homepage" width="100%">
+</p>
 
-## Features
+### 🍽️ Restaurant Menu
 
-### Customer Experience
-- Elegant restaurant landing page with a premium visual style.
-- Restaurant introduction and featured menu items.
-- Reservation form with date, time, phone number, and guest selection.
-- Responsive layout for different screen sizes.
+A curated selection of featured dishes with descriptions and prices, presented in a clean, editorial-style layout.
 
-### Authentication
+<p align="center">
+  <img src="menu.png" alt="Maison Restaurant Menu" width="100%">
+</p>
+
+### 📅 Table Reservation
+
+Customers can enter their details, choose a date and time, select the number of guests, and submit a reservation request.
+
+<p align="center">
+  <img src="reservation.png" alt="Maison Table Reservation Form" width="100%">
+</p>
+
+### 🗄️ Booking Database
+
+Reservation records are stored in Supabase PostgreSQL, making it possible to inspect booking information through the database dashboard.
+
+<p align="center">
+  <img src="bookings.png" alt="Maison Supabase Booking Records" width="100%">
+</p>
+
+---
+
+## ✨ Features
+
+### 🎨 User Interface
+- Elegant restaurant landing page.
+- Premium typography and a warm, neutral color palette.
+- Restaurant introduction and featured dishes.
+- Responsive reservation form.
+- Navigation between website sections.
+
+### 🔐 Authentication
 - Email and password registration.
 - Existing-user sign-in and sign-out.
-- Session handling with Supabase Auth.
-- Booking requests require an authenticated user.
+- User session management using Supabase Auth.
+- Authentication required before submitting a reservation.
 
-### Reservation Management
-- Saves reservations in a PostgreSQL database through Supabase.
-- Records customer information, reservation date and time, guest count, and status.
-- Generates a unique booking reference.
-- Uses `pending` as the initial reservation status.
+### 📋 Reservation Management
+- Reservation form with customer details.
+- Date and time selection.
+- Support for 1–6 guests.
+- Unique reservation reference.
+- Booking status tracking, initially set to `pending`.
+- Persistent storage using Supabase PostgreSQL.
 
-### Google Sheets Integration
-- Sends successful booking details to Google Sheets through a Google Apps Script web app.
-- Provides a spreadsheet view of customer bookings.
-- Makes it easier to review reservation records without opening the database dashboard.
+### 📊 Google Sheets Integration
+- Google Apps Script integration for spreadsheet updates.
+- Centralized reservation tracking in Google Sheets.
+- Convenient access to booking information for restaurant management.
 
-### Deployment
-- Static website hosting through Vercel.
+> Note: Browser-based `no-cors` requests cannot confirm whether Google Sheets accepted a record. Verify the spreadsheet or use a server-side integration for reliable synchronization.
+
+### 🚀 Deployment
+- Static website that can be hosted on services such as Vercel.
 - Source code maintained in GitHub.
-- Supabase provides authentication and database services.
+- Backend services provided by Supabase.
 
-## Technology Stack
+---
+
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Page structure and forms |
-| CSS3 | Layout, styling, and responsive design |
-| JavaScript | Form validation and application logic |
+| HTML5 | Website structure and forms |
+| CSS3 | Styling, layouts, and responsive design |
+| JavaScript | Form handling and application logic |
 | Supabase Auth | User registration and authentication |
-| Supabase PostgreSQL | Persistent reservation storage |
-| Google Sheets | Reservation tracking and reporting |
-| Google Apps Script | Transfers booking data to the spreadsheet |
-| GitHub | Version control and source code |
-| Vercel | Website deployment and hosting |
+| Supabase PostgreSQL | Persistent booking storage |
+| Google Apps Script | Spreadsheet integration |
+| Google Sheets | Reservation tracking |
+| GitHub | Source control and project hosting |
+| Vercel | Static website deployment |
 
-## Architecture
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 flowchart TD
@@ -103,110 +136,219 @@ flowchart TD
     B --> D[Reservation Form]
     D --> E[Supabase PostgreSQL]
     E --> F[Booking Confirmation]
-    E --> G[Google Apps Script]
+    E -. Optional synchronization .-> G[Google Apps Script]
     G --> H[Google Sheets]
-    I[GitHub Repository] --> J[Vercel Deployment]
+    I[GitHub Repository] --> J[Static Hosting]
     J --> B
 ```
 
-**Booking flow:** The customer signs in, submits a reservation, and the application stores the booking in Supabase. The application then sends the saved booking details to the Google Apps Script endpoint for spreadsheet recording.
+### Reservation Workflow
 
-The current browser-based Sheets integration uses a `no-cors` request, so the browser cannot confirm whether Google Sheets accepted the record. Verify synchronization in the spreadsheet itself.
+1. The customer opens the Maison website.
+2. The customer creates an account or signs in.
+3. The customer completes the reservation form.
+4. JavaScript validates the submitted details.
+5. Supabase stores the reservation in PostgreSQL.
+6. The application displays a booking reference and the reservation status.
+7. Google Apps Script can transfer booking information to Google Sheets when the integration is configured.
 
-## Database Design
+---
 
-The main database table is `public.bookings`.
+## 🗃️ Database Design
 
-| Column | Type | Description |
+The primary database table is `public.bookings`.
+
+| Column | Data Type | Description |
 |---|---|---|
-| `id` | UUID | Unique reservation identifier |
-| `user_id` | UUID | Reference to the authenticated user |
+| `id` | UUID | Unique booking identifier |
+| `user_id` | UUID | Authenticated user's identifier |
 | `customer_name` | Text | Customer's full name |
-| `email` | Text | Customer email |
+| `email` | Text | Customer email address |
 | `phone` | Text | Contact number |
 | `booking_date` | Date | Requested reservation date |
 | `booking_time` | Text | Requested reservation time |
 | `guests` | Integer | Number of guests, from 1 to 6 |
-| `status` | Text | Reservation status, initially `pending` |
+| `status` | Text | Reservation status |
 | `created_at` | Timestamptz | Record creation timestamp |
 
-The `user_id` references `auth.users(id)`, and the record identifier is generated using a UUID.
+### Database Constraints
 
-## Project Structure
+- `id` is the primary key and is generated as a UUID.
+- `user_id` references `auth.users(id)`.
+- Deleting an authenticated user cascades to their associated bookings under the current schema.
+- `guests` must be between 1 and 6.
+- `status` defaults to `pending`.
+- `created_at` defaults to the current timestamp.
+
+**Security:** Row Level Security (RLS) policies must restrict users to the records they are authorized to access. A public-facing publishable key is not a replacement for database access policies.
+
+---
+
+## 📁 Project Structure
 
 ```text
 maison-restaurant/
-├── index.html       # Restaurant website structure
-├── style.css        # Styling and responsive layout
-├── script.js        # Authentication and booking logic
-├── README.md        # Project documentation
-└── screenshots/
-    ├── homepage.png
-    ├── menu.png
-    ├── reservation.png
-    └── bookings.png
+│
+├── index.html        # Website structure
+├── style.css         # Styling and responsive layouts
+├── script.js         # Authentication and reservation logic
+├── README.md         # Project documentation
+│
+├── homepage.png      # Homepage screenshot
+├── menu.png          # Menu screenshot
+├── reservation.png   # Reservation form screenshot
+└── bookings.png      # Supabase booking records screenshot
 ```
 
-The `screenshots/` directory is optional; create it when adding the actual application screenshots.
+The screenshot paths above match the files uploaded to the repository root.
 
-## Getting Started
+---
+
+## ⚙️ Getting Started
 
 ### Prerequisites
 
 - A modern web browser.
-- A code editor such as Visual Studio Code.
+- Visual Studio Code or another code editor.
 - A Supabase project.
-- A Google Sheet and a deployed Google Apps Script web app.
+- Google Sheets and Google Apps Script if spreadsheet synchronization is required.
 
-### 1. Clone the repository
+### 1. Clone the Repository
+
+Replace the placeholder with your actual GitHub repository URL.
 
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 cd maison-restaurant
 ```
 
-Alternatively, download the repository as a ZIP file and extract it.
+Alternatively, download the repository as a ZIP file and open the extracted folder in Visual Studio Code.
 
 ### 2. Configure Supabase
 
-Create a Supabase project and execute the SQL needed to create the `bookings` table.
+Create a Supabase project and configure the `public.bookings` table using the SQL Editor.
 
-Configure Row Level Security (RLS) policies so authenticated users can create bookings only for their own user ID, and can access only the records they are authorized to access.
-
-Add your Supabase project URL and publishable key to `script.js`:
+The frontend uses the Supabase JavaScript client loaded from a CDN. Configure the project URL and publishable key in `script.js`:
 
 ```javascript
 const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
 const SUPABASE_KEY = 'YOUR_SUPABASE_PUBLISHABLE_KEY';
 ```
 
-The publishable key is intended for browser applications; database access must still be protected by correctly configured RLS policies.
+Use the publishable key intended for browser applications. Never expose a Supabase secret key or `service_role` key in frontend code.
 
-### 3. Configure Google Sheets
+Configure authentication and Row Level Security policies before accepting real customer bookings.
 
-1. Create a Google Sheet for restaurant bookings.
+### 3. Configure Google Sheets (Optional)
+
+1. Create a Google Sheet named **Maison Restaurant Bookings**.
 2. Add columns for booking ID, customer name, email, phone, booking date, booking time, guests, status, and creation timestamp.
-3. Create a Google Apps Script that accepts incoming booking data and appends it to the sheet.
-4. Deploy the script as a web app with the appropriate access settings.
-5. Configure the deployed `/exec` URL in `script.js`.
+3. Open Google Apps Script and create a script to receive booking data and append rows to the spreadsheet.
+4. Deploy the script as a web app.
+5. Configure its deployment URL in `script.js`.
+
+Example configuration:
 
 ```javascript
-const GOOGLE_SCRIPT_URL = ''https://script.google.com/macros/s/AKfycbyo_H1CIyy-k0HGQmxq_36-sh7MDQo_DwtFws_nvj3tXVXtnEm42WOLH9eM7P8A4RU3ag/exec'';
+const GOOGLE_SCRIPT_URL =
+  'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
 ```
 
-Use appropriate validation and access controls before handling real customer information.
+Use the deployed web app URL ending in `/exec`. Implement appropriate validation and access controls before processing real customer information.
 
-### 4. Run locally
+### 4. Run the Website Locally
 
-Open the project folder in Visual Studio Code and launch `index.html` using the Live Server extension.
+**Using Visual Studio Code:**
 
-Alternatively, use any static local HTTP server.
+1. Open the project folder.
+2. Install the Live Server extension if necessary.
+3. Right-click `index.html`.
+4. Select **Open with Live Server**.
 
-Test registration, sign-in, reservation submission, and the resulting records in Supabase and Google Sheets.
+The website should open at a local address such as `http://127.0.0.1:5500`.
 
-## Deployment
+No React, Vite, or other frontend build tool is required for this version.
 
-### Deploy using Vercel
+---
+
+## 🌐 Deployment
+
+### Deploy with Vercel
 
 1. Push the project to GitHub.
-2. Sign in to Vercel
+2. Sign in to Vercel and import the repository.
+3. Configure the project as a static website.
+4. Use the repository root as the project directory.
+5. Deploy the application.
+6. Open the generated deployment URL and test the booking workflow.
+
+If the project uses only HTML, CSS, and JavaScript, a framework preset is not required. Configure the deployment to serve `index.html` from the root.
+
+### Supabase Authentication Configuration
+
+If authentication redirects or email confirmations do not work on the deployed site:
+
+1. Open your Supabase project dashboard.
+2. Navigate to **Authentication → URL Configuration**.
+3. Set the production website URL as the Site URL.
+4. Add the local development URL and production URL to the allowed redirect URLs when needed.
+5. Test signup, email confirmation, sign-in, and sign-out.
+
+---
+
+## 🔒 Security Considerations
+
+- Keep secret API keys out of browser code and GitHub.
+- Use Supabase RLS policies to enforce record ownership.
+- Validate booking details on the backend or through database constraints where appropriate.
+- Do not treat a client-side success message as proof that a third-party integration succeeded.
+- Restrict access to customer contact information.
+- Review Google Apps Script deployment permissions before using real customer data.
+
+---
+
+## 🧪 Testing Checklist
+
+- [ ] Homepage and navigation load correctly.
+- [ ] Menu section displays all featured dishes.
+- [ ] Signup works with valid details.
+- [ ] Sign-in and sign-out work correctly.
+- [ ] Unauthenticated users cannot submit bookings.
+- [ ] Past reservation dates are rejected.
+- [ ] Valid reservations are saved in Supabase.
+- [ ] Booking references are displayed after successful submission.
+- [ ] Reservation status defaults to `pending`.
+- [ ] Google Sheets receives booking records when integration is enabled.
+- [ ] The website works on desktop and mobile screens.
+
+---
+
+## 🔮 Future Improvements
+
+- Restaurant administration dashboard.
+- Booking approval and cancellation workflows.
+- Email confirmations and reservation reminders.
+- Real-time booking availability.
+- Duplicate booking prevention.
+- Menu images and detailed dish pages.
+- Better server-side synchronization with Google Sheets.
+- Automated testing and improved form validation.
+
+---
+
+## 👨‍💻 Author
+
+**Sahil Chaurasia**
+
+MCA Student | AI & ML | Software Development
+
+<p>
+  <a href="https://github.com/Wahsahil">GitHub Profile</a>
+</p>
+
+---
+
+<p align="center">
+  <strong>MAISON.</strong><br>
+  Thoughtfully prepared. Beautifully remembered.
+</p>
